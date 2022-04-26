@@ -1,0 +1,14 @@
+@import '../../utils/sass-utils/mixins.scss';
+
+.home-screen {
+    &__loader-container {
+        height: calc(100vh - 253px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__reports-list {
+        @include entryAnimation();
+    }
+}

@@ -1,0 +1,73 @@
+@import '../../../utils/sass-utils/variables.scss';
+
+.matches-list {
+  height: calc(100vh - 146px);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  background-color: $background;
+
+  &-item {
+    padding-bottom: 15px;
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(#000000, 0.1);
+    }
+    
+    &__content {
+      text-decoration: none;
+      
+      &__date {
+        text-align: right;
+        padding: 5px 10px;
+        font-size: 10px;
+        color: rgba(#000000, 0.45);
+      }
+
+      &__info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+
+        &__home-team-name,
+        &__away-team-name {
+          width: calc((100% - 150px)/2);
+          font-size: 12px;
+          color: rgba(#000000, 0.65);
+          padding-bottom: 2px;
+          box-sizing: border-box;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        &__home-team-name {
+          text-align: right;
+          padding-left: 10px;
+        }
+
+        &__away-team-name {
+          padding-right: 10px;
+        }
+
+        &__team-emblem {
+          height: 30px;
+          width: 30px;
+          margin: 0 10px;
+        }
+
+        &__result {
+          width: 40px;
+          margin: 0 5px;
+          font-size: 18px;
+          padding-bottom: 2px;
+          text-align: center;
+          &--win  {color: $win}
+          &--draw {color: $draw}
+          &--lose {color: $lose}
+        }
+      }
+    }
+  }
+}

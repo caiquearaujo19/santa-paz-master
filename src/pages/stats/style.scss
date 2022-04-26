@@ -1,0 +1,19 @@
+@import '../../utils/sass-utils/mixins.scss';
+
+.stats-screen {
+  &__container {
+    height: calc(100vh - 46px);
+    overflow-y: auto;
+
+    &__loader-container {
+      height: calc(100vh - 449px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__rankings {
+      @include entryAnimation();
+    }
+  }
+}

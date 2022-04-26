@@ -1,0 +1,78 @@
+@import '../../../utils/sass-utils/variables.scss';
+@import '../../../utils/sass-utils/mixins.scss';
+
+.next-match {
+  height: 190px;
+  background-color: $main-color;
+  background-image: url('../../../assets/images/fox.png');
+  background-size: cover;
+  background-position-y: center;
+  padding-bottom: 20px;
+
+  &__emblems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    @include entryAnimation();
+
+    &__home,
+    &__away {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+    }
+
+    &__vs {
+      margin: 0 35px;
+      color: white;
+      font-weight: bold;
+    }
+  }
+
+  &__info {
+    &__adversary {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      margin-bottom: 4px;
+      @include entryAnimation(0.2s);
+    }
+
+    &__place-and-date {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: rgba(#FFFFFF, 0.5);
+      @include entryAnimation(0.4s);
+
+      &__place {
+        border-right: 2px solid rgba(#FFFFFF, 0.15);
+        padding-right: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &--loading {
+    .next-match__emblems {
+      &__home,
+      &__away {
+        @extend .loading-next-match;
+      }
+    }
+  }
+}
+
+.loading-next-match {
+  background-color: rgba(#FFFFFF, 0.5);
+  animation: blinking 1s ease-in-out infinite;
+}
+
+@keyframes blinking {
+  0%   { opacity: 0.3 }
+  50%  { opacity: 1 }
+  100% { opacity: 0.3 }
+}

@@ -1,0 +1,16 @@
+@import '../../utils/sass-utils/mixins.scss';
+
+.player-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  &__coming-soon {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(#000000, 0.45);
+    @include entryAnimation(0.8s);
+  }
+}

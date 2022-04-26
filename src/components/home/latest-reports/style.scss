@@ -1,0 +1,61 @@
+@import '../../../utils/sass-utils/variables.scss';
+
+.latest-reports {
+  height: calc(100vh - 234px);
+  background-color: $background;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .reports-list-item {
+      &:not(:first-child) {
+        padding-top: 10px;
+      }
+      &:not(:last-child) {
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(#000000, 0.1);
+      }
+
+      &__content {
+        text-decoration: none;
+        display: flex;
+
+        &__info {
+          width: calc(100vw - 133px);
+          padding: 0 8px 0 20px;
+  
+          &__title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: rgba(#000000, 0.65);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+  
+          &__description {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            font-size: 14px;
+            color: rgba(#000000, 0.45);
+          }
+        }
+  
+        &__image {
+          padding-right: 20px;
+
+          &__container {
+            height: 61px;
+            width: 85px;
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+    }
+  }
+}

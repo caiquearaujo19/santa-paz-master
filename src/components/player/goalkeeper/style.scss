@@ -1,0 +1,38 @@
+@import '../../../utils/sass-utils/variables.scss';
+@import '../../../utils/sass-utils/mixins.scss';
+
+.goalkeeper {
+    background-color: $main-color;
+    background-image: url('../../../assets/images/gloves.png');
+    background-size: 200px;
+    background-position: center 60px;
+    background-repeat: no-repeat;
+    color: white;
+    padding-bottom: 20px;
+  
+    &__numbers {
+      display: flex;
+      justify-content: center;
+      @include entryAnimation(0.8s);
+  
+      &__item {
+        width: calc(100% / 3);
+        max-width: 200px;
+        text-align: center;
+        padding: 0 20px;
+        &:not(:last-child) {
+          border-right: 1px solid rgba(#FFFFFF, 0.15);
+        }
+  
+        &__value {
+          font-size: 50px;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+  
+        &__title {
+          font-size: 14px;
+        }
+      }
+    }
+  }

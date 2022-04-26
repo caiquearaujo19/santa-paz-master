@@ -1,0 +1,15 @@
+@mixin entryAnimation($delay: 0) {
+    opacity: 0;
+    animation: animation 0.5s ease forwards;
+    animation-delay: $delay;
+    @keyframes animation {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}

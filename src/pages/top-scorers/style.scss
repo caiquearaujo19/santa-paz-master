@@ -1,0 +1,14 @@
+@import '../../utils/sass-utils/mixins.scss';
+
+.top-scorers-screen {
+    &__header {
+        padding-top: 46px;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 20px 0 0 0;
+        margin: 0;
+        @include entryAnimation();
+    }
+}

@@ -1,0 +1,30 @@
+@import '../../../utils/sass-utils/mixins.scss';
+
+.substitutions {
+    &__list {
+        list-style: none;
+        padding: 12px 20px;
+        margin: 0;
+        @include entryAnimation(1s);
+
+        &__item {
+            display: flex;
+            align-items: center;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            &__icon {
+                display: flex;
+                align-items: center;
+                margin-right: 5px;
+            }
+
+            &__divider {
+                height: 20px;
+                border-right: 1px solid lightgrey;
+                margin: 0 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@import '../../../utils/sass-utils/mixins.scss';
+
+.line-up {
+    &__list {
+        list-style: none;
+        padding: 12px 20px;
+        margin: 0;
+        @include entryAnimation(0.8s);
+
+        &__item {
+            display: flex;
+            align-items: center;
+
+            &__position {
+                width: 32px;
+                margin-right: 10px;
+                color: lightgrey;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

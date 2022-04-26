@@ -1,0 +1,30 @@
+@import '../../utils/sass-utils/variables.scss';
+
+.section-title {
+  padding: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  svg {
+    height: 15px;
+    width: 15px;
+    
+    path {
+      fill: white;
+    }
+  }
+
+  &--blue {
+    color: $main-color;
+
+    svg {
+      path {
+        fill: $main-color;
+      }
+    }
+  }
+}

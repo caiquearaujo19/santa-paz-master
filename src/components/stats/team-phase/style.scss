@@ -1,0 +1,61 @@
+@import '../../../utils/sass-utils/variables.scss';
+@import '../../../utils/sass-utils/mixins.scss';
+
+.team-phase {
+  background-color: $main-color;
+  background-image: url('../../../assets/images/chart.png');
+  background-size: 300px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  color: white;
+  padding-bottom: 20px;
+  position: relative;
+
+  &__year-select {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    color: white;
+    outline: none;
+
+    & > option {
+      color: #333;
+      font-size: 18px;
+    }
+  }
+
+  &__percentage {
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    @include entryAnimation();
+  }
+
+  &__numbers {
+    display: flex;
+    justify-content: center;
+    @include entryAnimation(0.2s);
+
+    &__item {
+      text-align: center;
+      padding: 0 15px;
+      &:not(:last-child) {
+        border-right: 1px solid rgba(#FFFFFF, 0.15);
+      }
+
+      &__value {
+        font-size: 30px;
+        font-weight: bold;
+      }
+
+      &__title {
+        font-size: 14px;
+      }
+    }
+  }
+}

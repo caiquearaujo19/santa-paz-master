@@ -1,0 +1,73 @@
+@import '../../../utils/sass-utils/variables.scss';
+@import '../../../utils/sass-utils/mixins.scss';
+
+.match-count {
+  height: 100px;
+  background-color: $main-color;
+  background-image: url('../../../assets/images/soccer-field.png');
+  background-size: 300px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include entryAnimation();
+
+    &__year-select {
+      font-size: 30px;
+      font-weight: bold;
+      border: none;
+      background-color: transparent;
+      color: white;
+      outline: none;
+
+      & > option {
+        color: #333;
+        font-size: 18px;
+      }
+    }
+
+    &__matches {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 500;
+      opacity: 0.5;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    align-items: center;
+    @include entryAnimation(0.2s);
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+     &__number {
+       height: 40px;
+       width: 40px;
+       border-radius: 50%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-size: 20px;
+       font-weight: 500;
+       margin-bottom: 5px;
+     }
+
+     &__title {
+       font-size: 10px;
+       text-align: center;
+     }
+    }
+  }
+}
