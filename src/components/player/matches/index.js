@@ -11,11 +11,13 @@ export default function PlayerMatches({matches, player}) {
 
   const playedAsAReserve = useCallback((match) => {
     let played = false
-    match.substitutions.forEach(subs => {
-      if(subs.in === player.name) {
-        played = true
-      }
-    })
+    if(match.substitutions) {
+      match.substitutions.forEach(subs => {
+        if(subs.in === player.name) {
+          played = true
+        }
+      })
+    }
     return played
   }, [player])
 
