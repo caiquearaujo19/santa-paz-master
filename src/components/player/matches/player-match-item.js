@@ -75,6 +75,7 @@ export default function PlayerMatchItem({matchId, match, player}) {
       assists.forEach(ass => {
         if(ass.name === player.name) {
           r = true
+          count++
         }
       })
     }
@@ -94,7 +95,7 @@ export default function PlayerMatchItem({matchId, match, player}) {
     if(match.substitutions) {
       match.substitutions.forEach(sub => {
         if (sub.out === player.name) {
-          r = true;
+          r = true
         }
       })
     }
